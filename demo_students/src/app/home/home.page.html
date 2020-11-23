@@ -1,20 +1,30 @@
-<ion-header [translucent]="true">
+
+<ion-header [translucent]="true" color="primary">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Aston Etudiants
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [scrollEvents]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title  size="large">Etudiants</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+  <div id="container" *ngIf="students">
+    <div>{{message}}</div>
+    <ion-list>
+      <ion-item *ngFor="let student of students">
+        <ion-checkbox (ionChange)="onChange(student.id)" [checked]="student.alternant"></ion-checkbox>
+        <ion-label> {{student.name}}</ion-label>
+        <ion-label>{{student.average}}</ion-label>
+       <!-- <ion-label>{{student.alternant}}</ion-label> -->
+        <ion-button (click)="etudentDetails(student.id)" slot="start" color="primary">click</ion-button>
+        <ion-button [color]="student.average > 13? 'success': 'primary'">{{student.average}}</ion-button>
+      </ion-item>
+    </ion-list> </div>
 </ion-content>
