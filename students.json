@@ -1,0 +1,100 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Clément",
+      "lastname": "Arnaud",
+      "age": 24,
+      "average": 14,
+      "alternant": true
+    },
+    {
+      "id": 2,
+      "name": "Charhazad",
+      "lastname": "Arnaud",
+      "age": 42,
+      "average": 17.2,
+      "alternant": false
+    },
+    {
+      "id": 3,
+      "name": "Fatma",
+      "lastname": "Arnaud",
+      "age": 33,
+      "average": 12.9,
+      "alternant": true
+    },
+    {
+      "id": 4,
+      "name": "Radi",
+      "lastname": "Arnaud",
+      "age": 27,
+      "average": 14,
+      "alternant": true
+    },
+    {
+      "id": 5,
+      "name": "Claud",
+      "lastname": "Arnaud",
+      "age": 34,
+      "average": 17.2,
+      "alternant": false
+    },
+    {
+      "id": 6,
+      "name": "Eric",
+      "lastname": "Arnaud",
+      "age": 41,
+      "average": 11,
+      "alternant": true
+    },
+    {
+      "id": 7,
+      "name": "Bruno",
+      "lastname": "Arnaud",
+      "age": 22,
+      "average": 16.3,
+      "alternant": true
+    },
+    {
+      "id": 8,
+      "name": "Francine",
+      "lastname": "Arnaud",
+      "age": 32,
+      "average": 12.5,
+      "alternant": true
+    },
+    {
+      "id": 9,
+      "name": "David",
+      "lastname": "Arnaud",
+      "age": 28,
+      "average": 14.6,
+      "alternant": false
+    },
+    {
+      "id": 10,
+      "name": "David",
+      "lastname": "Arnaud",
+      "age": 27,
+      "average": 14.6,
+      "alternant": true
+    },
+    {
+      "id": 11,
+      "name": "David",
+      "lastname": "Arnaud",
+      "age": 38,
+      "average": 14.6,
+      "alternant": false
+    },
+    {
+      "id": 12,
+      "name": "David",
+      "lastname": "Arnaud",
+      "age": 29,
+      "average": 14.6,
+      "alternant": true
+    }
+  ]
+}
