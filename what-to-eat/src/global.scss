@@ -1,0 +1,80 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+  --ion-color-textcolor: #d9690d;
+  --ion-color-textcolor-rgb: 217,105,13;
+  --ion-color-textcolor-contrast: #000000;
+  --ion-color-textcolor-contrast-rgb: 0,0,0;
+  --ion-color-textcolor-shade: #bf5c0b;
+  --ion-color-textcolor-tint: #dd7825;
+}
+
+.ion-color-textcolor {
+  --ion-color-base: var(--ion-color-textcolor);
+  --ion-color-base-rgb: var(--ion-color-textcolor-rgb);
+  --ion-color-contrast: var(--ion-color-textcolor-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-textcolor-contrast-rgb);
+  --ion-color-shade: var(--ion-color-textcolor-shade);
+  --ion-color-tint: var(--ion-color-textcolor-tint);
+}
+
+:root {
+  --ion-color-mycolor: #5a381c;
+  --ion-color-mycolor-rgb: 90,56,28;
+  --ion-color-mycolor-contrast: #ffffff;
+  --ion-color-mycolor-contrast-rgb: 255,255,255;
+  --ion-color-mycolor-shade: #4f3119;
+  --ion-color-mycolor-tint: #6b4c33;
+}
+
+.ion-color-mycolor {
+  --ion-color-base: var(--ion-color-mycolor);
+  --ion-color-base-rgb: var(--ion-color-mycolor-rgb);
+  --ion-color-contrast: var(--ion-color-mycolor-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-mycolor-contrast-rgb);
+  --ion-color-shade: var(--ion-color-mycolor-shade);
+  --ion-color-tint: var(--ion-color-mycolor-tint);
+}
+
+:root {
+  --ion-color-bgcolor: #ebdacb;
+  --ion-color-bgcolor-rgb: 235,218,203;
+  --ion-color-bgcolor-contrast: #000000;
+  --ion-color-bgcolor-contrast-rgb: 0,0,0;
+  --ion-color-bgcolor-shade: #cfc0b3;
+  --ion-color-bgcolor-tint: #edded0;
+}
+
+.ion-color-bgcolor {
+  --ion-color-base: var(--ion-color-bgcolor);
+  --ion-color-base-rgb: var(--ion-color-bgcolor-rgb);
+  --ion-color-contrast: var(--ion-color-bgcolor-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-bgcolor-contrast-rgb);
+  --ion-color-shade: var(--ion-color-bgcolor-shade);
+  --ion-color-tint: var(--ion-color-bgcolor-tint);
+}
