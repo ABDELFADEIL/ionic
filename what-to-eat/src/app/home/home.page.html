@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
+
   <ion-toolbar>
-    <ion-title>
+    <ion-title color="mycolor">
       {{"Que manger ?" | uppercase}}
     </ion-title>
   </ion-toolbar>
@@ -14,11 +15,23 @@
       <ion-select-option  [value]="category.strCategory" *ngFor="let category of categories">{{category.strCategory}}</ion-select-option>
     </ion-select>
   </ion-item>
-
+  <ion-item-divider color="bgcolor">
+    <ion-badge color="mycolor">{{category}}</ion-badge>
+  </ion-item-divider>
  <ion-grid *ngIf="meals">
    <ion-row>
      <ion-col *ngFor="let meal of meals" size="6" class="Card-without-image hydrated">
+       <ion-card>
        <img [src]="meal.strMealThumb" alt="meal image" [routerLink]="['/meal',meal.idMeal]">
+       <ion-row>
+         <ion-col>
+           <div style="margin-top: 10px !important; color: #5a381c">{{meal.strMeal}} </div>
+         </ion-col>
+         <ion-col>
+           <ion-button color="bgcolor"  [routerLink]="['/meal',meal.idMeal]">Details</ion-button>
+         </ion-col>
+       </ion-row>
+       </ion-card>
      </ion-col>
    </ion-row>
  </ion-grid>

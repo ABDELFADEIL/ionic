@@ -11,9 +11,11 @@ export class HomePage implements OnInit{
   public meals: MEALDB_ListItem [] | null = null;
   public categories: MEALDB_Category [];
   categoryName: string;
+  category: any;
   constructor(private mealdbService: MealdbApiService) {}
 
   getMealsByCategory(category){
+    this.category = category;
     this.mealdbService.getMealByCategory(category).subscribe((meals: MEALDB_ListItem[]) => {
       this.meals = meals;
       console.log(this.meals);
