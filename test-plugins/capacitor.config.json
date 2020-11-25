@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "what-to-eat",
+  "appName": "test-plugins",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

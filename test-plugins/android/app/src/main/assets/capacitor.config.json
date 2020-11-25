@@ -1,10 +1,9 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "what-to-eat",
+  "appName": "test-plugins",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
-  "linuxAndroidStudioPath": "/snap/android-studio/current/android-studio/bin/studio.sh",
   "plugins": {
     "SplashScreen": {
       "launchShowDuration": 0

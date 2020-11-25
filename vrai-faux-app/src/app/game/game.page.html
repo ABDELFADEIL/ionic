@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid style="height: 100%">
+    <ion-row style="height: 10%">
+      <ion-col>
+       <ion-item lines="none">
+         <ion-label color="success">Score 0</ion-label>
+       </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none" >
+          <ion-label color="danger">
+            <ion-icon *ngFor="let i of getArray(live)" name="heart"></ion-icon>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="height: 80%">
+      <ion-col size="12">
+       les question
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="height: 10%">
+      <ion-col>
+         <ion-button style="margin: auto; width: 100%" expand="block" color="success">Vrai</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-item lines="none">
+
+        </ion-item>
+        <ion-item lines="none">
+        </ion-item>
+      </ion-col>
+
+      <ion-col>
+          <ion-button style="margin: auto; width: 100%" expand="block" color="danger">Faut</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

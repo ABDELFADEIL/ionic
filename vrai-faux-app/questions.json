@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "La France est un pays d'Afrique",
+      "correct": false,
+      "comment": "C'est un pays européen",
+      "level": "Facile",
+      "category": "Géographie"
+    },
+    {
+      "id": 2,
+      "title": "La Juventus a remporté 37 scudetti",
+      "correct": true,
+      "comment": "",
+      "level": "Facile",
+      "category": "Sport"
+    },
+    {
+      "id": 3,
+      "title": "La capitale du Portugal est Porto",
+      "correct": false,
+      "comment": "C'est Lisbonne",
+      "level": "Facile",
+      "category": "Géographie"
+    },
+    {
+      "id": 4,
+      "title": "Christophe est un prof exceptionnel",
+      "correct": true,
+      "comment": "No comment",
+      "level": "Difficile",
+      "category": "Psychologie"
+    },
+    {
+      "id": 5,
+      "title": "Angular est un framework PHP",
+      "correct": false,
+      "comment": "C'est du JS !!!",
+      "level": "Facile",
+      "category": "Informatique"
+    }
+  ]
+}
