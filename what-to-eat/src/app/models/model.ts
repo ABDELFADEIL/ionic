@@ -1,4 +1,4 @@
-export enum MEALDB_Category {
+export enum MEALDB_CategoryI {
     'Beef' = 'Beef',
     'Chicken' = 'Chicken',
     'Lamb' = 'Lamb',
