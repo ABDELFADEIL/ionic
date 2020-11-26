@@ -6,44 +6,72 @@
 
 <ion-content>
 
-  <ion-grid style="height: 100%">
+  <ion-grid style="height: 90%" *ngIf="questions">
     <ion-row style="height: 10%">
       <ion-col>
        <ion-item lines="none">
-         <ion-label color="success">Score 0</ion-label>
+         <ion-label color="success">Score {{this.score}}</ion-label>
        </ion-item>
       </ion-col>
       <ion-col>
         <ion-item lines="none" >
-          <ion-label color="danger">
+          <ion-label color="danger" *ngIf="getArray(live)">
             <ion-icon *ngFor="let i of getArray(live)" name="heart"></ion-icon>
           </ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
-
+    <hr>
     <ion-row style="height: 80%">
-      <ion-col size="12">
-       les question
+
+      <ion-col size="12" *ngIf="!answered && !gameOver">
+        <ion-text color="primary">
+          <h2>Question n° {{questionIndex+1}}</h2>
+        </ion-text>
+        <ion-text color="dark">
+          <h4>{{ questions[questionIndex].title }}</h4>
+        </ion-text>
+      </ion-col>
+      <ion-col style="margin: auto; text-align: center" *ngIf="answered && !gameOver">
+        <ion-text [color]="isCorrect ? 'success': 'danger'"><h3>{{isCorrect ? 'Vrai': 'Faut'}}</h3></ion-text>
+        <ion-text color="primary" *ngIf="questions[questionIndex].comment">
+          <p>{{ questions[questionIndex].comment}}</p>
+        </ion-text>
+      </ion-col>
+
+      <ion-col style="margin: auto; text-align: center" *ngIf="gameOver">
+        <ion-text color="secondary">
+          <h3>Game Over</h3>
+          <h4>Score: {{ score }}</h4>
+        </ion-text>
+        <ion-text>
+          <ion-button color="success" (click)="replay()">Rejouer</ion-button>
+          <ion-button color="warning" [routerLink]="'/'">Page Accueil</ion-button>
+        </ion-text>
       </ion-col>
     </ion-row>
 
-    <ion-row style="height: 10%">
+    <hr>
+    <ion-row style="height: 10%" *ngIf="!answered && !gameOver">
       <ion-col>
-         <ion-button style="margin: auto; width: 100%" expand="block" color="success">Vrai</ion-button>
+         <ion-button (click)="Answer(true)" style="margin: auto; width: 100%" expand="block" color="success">Vrai</ion-button>
       </ion-col>
 
       <ion-col>
         <ion-item lines="none">
-
         </ion-item>
         <ion-item lines="none">
         </ion-item>
       </ion-col>
-
       <ion-col>
-          <ion-button style="margin: auto; width: 100%" expand="block" color="danger">Faut</ion-button>
+          <ion-button (click)="Answer(false)" style="margin: auto; width: 100%" expand="block" color="danger">Faut</ion-button>
       </ion-col>
+    </ion-row>
+    <ion-row style="height: 10%" *ngIf="answered && !gameOver">
+      <ion-toolbar class="center" style="text-align: center">
+        <ion-button
+                (click)="toNextQuestion()">Suivante</ion-button>
+      </ion-toolbar>
     </ion-row>
   </ion-grid>
 

@@ -9,10 +9,16 @@ import {QuestionService} from "../services/question.service";
 })
 export class GamePage implements OnInit {
 
-  score: number;
+  score: number = 0;
   respose: boolean;
   live: number = 3;
-  questions: Question [] = [];
+  gameOver: boolean = false;
+  //replay: boolean;
+  isCorrect: boolean;
+  questionIndex: number = 0;
+  questions: Question [] | null;
+  answered: boolean = false;
+
 
   constructor(private questionService: QuestionService) {
   }
@@ -32,7 +38,34 @@ export class GamePage implements OnInit {
     return Array(n);
   }
 
+  replay(){
+    this.getQuestion();
+    this.score = 0;
+    this.live = 3;
+    this.answered = false;
+    this.gameOver = false;
+    this.questionIndex = 0;
+  }
 
+  toNextQuestion() {
+    this.questionIndex++;
+    this.respose = false;
+    this.answered = false;
+  }
 
-
+  Answer(answer: boolean) {
+   console.log(answer);
+   this.answered = true;
+   let response: boolean = this.questions[this.questionIndex].correct;
+   if(answer == response){
+     this.score++;
+     this.isCorrect = true;
+   } else {
+     this.isCorrect = false;
+     this.live--;
+   }
+   if (this.questionIndex >= this.questions.length-1 || this.live == 0) {
+     this.gameOver = true
+   }
+  }
 }
